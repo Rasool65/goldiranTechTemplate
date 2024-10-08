@@ -561,6 +561,48 @@ input[type=number] {
   fill: #01bd2a;
 }
 
+.page-500 {
+  background-color: #fdfdfd !important;
+}
+
+.page-404 {
+  background-color: white !important;
+}
+
+.page-404 .notif, .page-500 .notif {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.page-404 .notif span, .page-500 .notif span {
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+  color: #bdbdbd;
+}
+.page-404 .image-404, .page-500 .image-404 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.page-404 .image-404 img, .page-500 .image-404 img {
+  width: calc(100% - 50px);
+}
+.page-404 .image-500, .page-500 .image-500 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.page-404 .image-500 img, .page-500 .image-500 img {
+  width: calc(100% - 0px);
+}
+
 .splash-page {
   background-color: #d71729;
   width: 100%;
