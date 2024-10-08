@@ -473,6 +473,24 @@ input[type=number] {
   padding-bottom: 30px;
 }
 
+.phone-btn {
+  padding-right: 25px;
+  position: relative;
+}
+.phone-btn:before {
+  content: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.0304 17.1138L17.5142 17.6572C17.5142 17.6572 16.2872 18.949 12.9382 15.4231C9.58925 11.8972 10.8162 10.6054 10.8162 10.6054L11.1412 10.2632C11.942 9.42017 12.0175 8.06667 11.3189 7.07855L9.88974 5.05726C9.02503 3.83427 7.35413 3.67271 6.36302 4.71616L4.58414 6.58899C4.09271 7.10638 3.76338 7.77708 3.80332 8.5211C3.90549 10.4246 4.71885 14.5199 9.25745 19.2983C14.0704 24.3654 18.5864 24.5668 20.4332 24.3845C21.0173 24.3269 21.5253 24.0119 21.9346 23.5809L23.5446 21.8859C24.6314 20.7418 24.3249 18.7803 22.9345 17.98L20.7692 16.7336C19.8562 16.2081 18.744 16.3625 18.0304 17.1138Z' fill='white'/%3E%3Cpath d='M15.4275 2.53022C15.5025 2.06681 15.9406 1.75246 16.404 1.82747C16.4327 1.83297 16.525 1.85022 16.5733 1.86098C16.6701 1.88253 16.805 1.91568 16.9731 1.96467C17.3095 2.06264 17.7794 2.22404 18.3433 2.48258C19.4725 3.00024 20.9751 3.90578 22.5343 5.46502C24.0935 7.02426 24.9991 8.52684 25.5167 9.65596C25.7753 10.2199 25.9367 10.6898 26.0346 11.0262C26.0836 11.1944 26.1168 11.3293 26.1383 11.426C26.1491 11.4743 26.157 11.5131 26.1624 11.5418L26.169 11.5772C26.2439 12.0405 25.9325 12.4968 25.4691 12.5719C25.007 12.6467 24.5717 12.3337 24.4948 11.8726C24.4925 11.8601 24.4859 11.8269 24.479 11.7955C24.4649 11.7327 24.4408 11.6332 24.4025 11.5016C24.3258 11.2383 24.1926 10.8469 23.9714 10.3644C23.5296 9.40075 22.7351 8.07002 21.3322 6.6671C19.9293 5.26419 18.5986 4.46973 17.6349 4.02793C17.1524 3.80675 16.7611 3.67355 16.4977 3.59684C16.3661 3.5585 16.2007 3.52052 16.1379 3.50655C15.6766 3.42968 15.3527 2.9923 15.4275 2.53022Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.684 6.43996C15.813 5.98857 16.2835 5.7272 16.7349 5.85616L16.5014 6.67347C16.7349 5.85616 16.7349 5.85616 16.7349 5.85616L16.7366 5.85664L16.7383 5.85714L16.742 5.85824L16.7508 5.86087L16.7733 5.86785C16.7903 5.87331 16.8117 5.88043 16.8371 5.88946C16.888 5.90753 16.9553 5.93321 17.0378 5.96857C17.2029 6.03933 17.4285 6.14861 17.7057 6.31261C18.2603 6.64092 19.0176 7.18626 19.9073 8.07589C20.7969 8.96553 21.3422 9.7228 21.6705 10.2775C21.8345 10.5546 21.9438 10.7802 22.0146 10.9454C22.05 11.0279 22.0757 11.0951 22.0937 11.146C22.1028 11.1715 22.1098 11.1928 22.1154 11.2099L22.1223 11.2323L22.1249 11.2411L22.126 11.2449L22.1265 11.2466C22.1265 11.2466 22.127 11.2483 21.3097 11.4818L22.127 11.2483C22.256 11.6997 21.9945 12.1701 21.5433 12.2991C21.0957 12.4269 20.6293 12.1711 20.4957 11.7268L20.4915 11.7145C20.4855 11.6975 20.473 11.664 20.4521 11.615C20.4101 11.5172 20.3341 11.3571 20.2076 11.1434C19.9549 10.7164 19.4985 10.0713 18.7052 9.27797C17.9119 8.48469 17.2667 8.0283 16.8398 7.7756C16.6261 7.6491 16.466 7.57305 16.3681 7.53112C16.3192 7.51014 16.2856 7.49763 16.2686 7.49159L16.2564 7.4874C15.8121 7.35381 15.5562 6.8875 15.684 6.43996Z' fill='white'/%3E%3C/svg%3E%0A");
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.sms-text {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: justify;
+  margin-top: 30px;
+}
+
 .forget-password-modal {
   position: fixed;
   left: 0;
@@ -480,6 +498,7 @@ input[type=number] {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
 }
 .forget-password-modal:before {
   content: "";
@@ -493,17 +512,23 @@ input[type=number] {
   backdrop-filter: blur(3px);
   z-index: 2;
 }
+.forget-password-modal .close-modal {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
 .forget-password-modal .modal-card {
   position: absolute;
   left: 50%;
   top: 50%;
-  padding: 15px 25px;
+  padding: 15px 20px;
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 20px;
   width: 100%;
   max-width: 320px;
   z-index: 3;
+  padding-top: 55px;
 }
 .forget-password-modal .modal-card .title {
   font-size: 14px;
@@ -511,6 +536,92 @@ input[type=number] {
   color: black;
   text-align: center;
   margin-bottom: 15px;
+  position: absolute;
+  width: calc(100% - 65px);
+  right: 25px;
+  top: 18px;
+}
+.forget-password-modal .modal-card .modal-content-box {
+  height: auto;
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.history-modal .modal-card {
+  max-height: calc(100% - 50px);
+}
+
+.history-card {
+  background-color: #F2F2F2;
+  border-radius: 15px;
+  padding-top: 10px;
+  height: auto;
+  min-height: 210px;
+  margin-bottom: 15px;
+}
+.history-card .history-card-title {
+  background-color: #6D6E71;
+  border-radius: 40px;
+  padding: 2px 5px;
+  width: calc(100% - 20px);
+  height: 30px;
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: -15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.history-card .history-service-details {
+  padding: 0 15px;
+}
+.history-card .history-service-details .col-6, .history-card .history-service-details .col-12 {
+  margin-bottom: 10px;
+}
+.history-card .history-service-details .data {
+  font-size: 10px;
+  font-weight: normal;
+  color: #767676;
+}
+.history-card .history-service-details .data span {
+  font-weight: 500;
+  color: black;
+}
+.history-card .more-info .more-info-btn {
+  text-align: center;
+  margin-bottom: 2px;
+}
+.history-card .more-info .more-info-box {
+  border-top: 1px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
+  margin-bottom: 2px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: auto;
+  background-color: #FBFBFB;
+  box-shadow: inset 0px 3px 9px rgba(0, 0, 0, 0.07);
+  padding: 10px;
+  transition: 0.3s;
+}
+.history-card .more-info .more-info-box .service-data {
+  font-size: 10px;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 10px;
+  text-align: justify;
+  line-height: 14px;
+}
+.history-card .more-info .more-info-box .service-data span {
+  color: #767676;
+}
+.history-card .more-info.close-info .more-info-box {
+  height: 1px;
+  padding: 0;
 }
 
 .otp-code {
@@ -561,12 +672,12 @@ input[type=number] {
   fill: #01bd2a;
 }
 
-.page-500 {
-  background-color: #fdfdfd !important;
-}
-
 .page-404 {
   background-color: white !important;
+}
+
+.page-500 {
+  background-color: #fdfdfd !important;
 }
 
 .page-404 .notif, .page-500 .notif {
@@ -589,7 +700,7 @@ input[type=number] {
   text-align: center;
 }
 .page-404 .image-404 img, .page-500 .image-404 img {
-  width: calc(100% - 50px);
+  width: calc(100% - 0px);
 }
 .page-404 .image-500, .page-500 .image-500 {
   position: absolute;
@@ -601,6 +712,11 @@ input[type=number] {
 }
 .page-404 .image-500 img, .page-500 .image-500 img {
   width: calc(100% - 0px);
+}
+@media only screen and (min-width: 600px) {
+  .page-404 .image-500, .page-404 .image-404, .page-500 .image-500, .page-500 .image-404 {
+    max-width: 600px;
+  }
 }
 
 .splash-page {
