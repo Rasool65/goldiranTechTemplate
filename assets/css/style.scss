@@ -330,27 +330,27 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.text-area-box{
-    textarea{
-        width: 100%;
-        border: none;
-        border-bottom: 1px solid #a9a9a9;
-        background-color: transparent;
-        outline: none;
-        font-size: 12px;
-        font-weight: 500;
-        color: black;
-        margin-bottom: 20px;
-        padding-top: 15px;
-        padding-right: 10px;
-        &:focus{
-        }
-        &::placeholder{
-            font-size: 12px;
-            font-weight: 500;
-            color: #adadad !important;
-        }
+.text-area-box {
+  textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #a9a9a9;
+    background-color: transparent;
+    outline: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-right: 10px;
+    &:focus {
     }
+    &::placeholder {
+      font-size: 12px;
+      font-weight: 500;
+      color: #adadad !important;
+    }
+  }
 }
 // ───────────────────────────────── Select Style
 .select-box {
@@ -369,8 +369,8 @@ input[type="number"] {
     box-shadow: none !important;
     border-bottom: 1px solid #a9a9a9;
     &:focus {
-        border-color: black !important;
-        background-color: transparent !important;
+      border-color: black !important;
+      background-color: transparent !important;
     }
     background-color: transparent;
     font-size: 12px;
@@ -1357,7 +1357,7 @@ input[type="number"] {
       backdrop-filter: blur(10px);
       padding: 35px 30px;
       transition: 0.3s;
-      &.active{
+      &.active {
         right: 0;
       }
       .filter-close-btn {
@@ -1370,10 +1370,10 @@ input[type="number"] {
         align-items: center;
         margin-bottom: 35px;
       }
-      .clear-filter{
-
+      .clear-filter {
       }
-      .filter-btn , .clear-filter {
+      .filter-btn,
+      .clear-filter {
         width: 44px;
         height: 44px;
         border-radius: 50%;
@@ -1407,7 +1407,8 @@ input[type="number"] {
         top: 5px;
       }
     }
-    .filter-btn, .clear-filter {
+    .filter-btn,
+    .clear-filter {
       cursor: pointer;
       width: 38px;
       height: 38px;
@@ -1421,8 +1422,8 @@ input[type="number"] {
         width: 20px;
       }
     }
-    .clear-filter{
-        margin-right: 10px;
+    .clear-filter {
+      margin-right: 10px;
     }
   }
 
@@ -1559,161 +1560,218 @@ input[type="number"] {
 
 // ───────────────────────────────── Start **Service Details
 // ---------------------------------------------------
-.service-details{
-    height: calc(100% - 30px);
-    .service-details-card{
-        width: 100%;
-        height: 100%;
-        border-radius: 30px;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.062);
-        background-color: white;
-        padding: 23px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        overflow: hidden;
-        .service-details-options{
-            position: absolute;
-            background-color: white;
-            width: calc(100% - 45px);
-            left: 50%;
-            height: 100%;
-            bottom: calc(-100% + 60px );
-            transform: translateX(-50%);
-            border-top: 2px solid #f5f4f2;
-            z-index: 80;
-            transition: 0.3s;
-            &.open{
-                transform: translate(-50%, calc(-100% + 150px));
-            }
-            .service-details-options-button{
-                padding: 15px 15px 25px 15px;
-                text-align: center;
-            }
-            .service-details-options-list{
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                flex-wrap: wrap;
-
-                .service-details-options-item{
-                    width: 25%;
-                    margin-bottom: 20px;
-                    cursor: pointer;
-                }
-                .service-options-icon{
-                    width: 58px;
-                    height: 58px;
-                    border-radius: 25px;
-                    background-color: #f4f4f4;
-                    margin: 0 auto;
-                    padding: 10px;
-                }
-                .service-options-title{
-                    margin-top: 5px;
-                    text-align: center;
-                    font-size: 10px;
-                    font-weight: bold;
-                    color: #4f4f4f;
-                }
-            }
-        }
-    }
-    .service-details-card-title{
+.service-details {
+  height: calc(100% - 30px);
+  .service-details-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.062);
+    background-color: white;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    .service-details-options {
+      position: absolute;
+      background-color: white;
+      width: calc(100% - 45px);
+      left: 50%;
+      height: 100%;
+      bottom: calc(-100% + 60px);
+      transform: translateX(-50%);
+      border-top: 2px solid #f5f4f2;
+      z-index: 80;
+      transition: 0.3s;
+      &.open {
+        transform: translate(-50%, calc(-100% + 150px));
+      }
+      .service-details-options-button {
+        padding: 15px 15px 25px 15px;
+        text-align: center;
+      }
+      .service-details-options-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        
-        .service-details-image{
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background-color: #e4e4e4;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.062);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .back-btn svg , .back-btn img{
-            width: 25px;
-            height: 25px;
-            cursor: pointer;
-        }
-        .service-details-name{
-            margin-right: 15px;
-            margin-left: auto;
-            .customer-name , .service-number{
-                font-size: 12px;
-                color: black;
-                font-weight: bold;
-            }
-            .service-number span{
-                font-size: 10px;
-                font-weight: bold;
-                color: #9b9b9b;
-                
-            }
-        }
-    }
-    .service-details-info{
+        justify-content: flex-start;
+        flex-wrap: wrap;
 
-    }
-    .service-info-btns{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: auto;
-        margin-bottom: 60px;
-    }
-}
-.circle-btn{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #d71729;
-    // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.226);
-    padding: 11px;
-    cursor: pointer;
-    svg , img{
-        width: 28px;
-        height: 28px;
-    }
-    &.success{
-        background-color: #2D9C25;
-    }
-}
-.map-page{
-    .services-list{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100% - 50px);
-        bottom: 85px;
-        height: 155px;
-        .services-item{
-            height: 153px;
-            margin: 0;
-            overflow: hidden;
+        .service-details-options-item {
+          width: 25%;
+          margin-bottom: 20px;
+          cursor: pointer;
         }
-        .seemore{
-            font-size: 10px;
-            font-weight: bold;
-            text-align: center;
-            background-color: #F5F4F2;
-            color: #6d6e71;
-            height: 32px;
-            width: calc(100% + 30px);
-            margin-left: -15px;
-            margin-right: -15px;
-            margin-bottom: -10px;
-            padding: 9px;
-            margin-top: 4px;
+        .service-options-icon {
+          width: 58px;
+          height: 58px;
+          border-radius: 25px;
+          background-color: #f4f4f4;
+          margin: 0 auto;
+          padding: 10px;
         }
+        .service-options-title {
+          margin-top: 5px;
+          text-align: center;
+          font-size: 10px;
+          font-weight: bold;
+          color: #4f4f4f;
+        }
+      }
     }
+  }
+  .service-details-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .service-details-image {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #e4e4e4;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.062);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .back-btn svg,
+    .back-btn img {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+    .service-details-name {
+      margin-right: 15px;
+      margin-left: auto;
+      .customer-name,
+      .service-number {
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
+      }
+      .service-number span {
+        font-size: 10px;
+        font-weight: bold;
+        color: #9b9b9b;
+      }
+    }
+  }
+  .service-details-info {
+  }
+  .service-info-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 60px;
+  }
+}
+.circle-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #d71729;
+  // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.226);
+  padding: 11px;
+  cursor: pointer;
+  svg,
+  img {
+    width: 28px;
+    height: 28px;
+  }
+  &.success {
+    background-color: #2d9c25;
+  }
+}
+.map-page {
+  .services-filter {
+    z-index: 4;
+    position: relative;
+  }
+  .serchbox {
+    input {
+      box-shadow: 0 0 8px 3px #00000054;
+    }
+  }
+  .filter-btn {
+    box-shadow: 0 0 8px 3px #00000054;
+  }
+  .services-item {
+    border: 1px solid #e9e9e9;
+  }
+  .map-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    &:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #00000005;
+      z-index: 1;
+      pointer-events: none;
+    }
+    iframe {
+      filter: grayscale(0.9) brightness(1.07);
+    }
+  }
+  .map-pointer {
+    position: fixed;
+    z-index: 2;
+    top: 36%;
+    left: 45%;
+  }
+  .map-my-position {
+    position: fixed;
+    z-index: 2;
+    top: 36%;
+    left: 25%;
+  }
+  .services-list {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 50px);
+    bottom: 85px;
+    height: 155px;
+    .customer-name {
+      padding-top: 7px;
+    }
+    .services-item {
+      height: 153px;
+      margin: 0;
+      overflow: hidden;
+    }
+    .col-6{
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    .seemore {
+      font-size: 10px;
+      font-weight: bold;
+      text-align: center;
+      background-color: #f5f4f2;
+      color: #6d6e71;
+      height: 32px;
+      width: calc(100% + 30px);
+      margin-left: -15px;
+      margin-right: -15px;
+      // margin-bottom: -10px;
+      padding: 9px;
+      margin-top: 0px;
+    }
+  }
 }
 // ─────────────────────────--──────── End **Service Details
 // ---------------------------------------------------

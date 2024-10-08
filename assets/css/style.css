@@ -1190,7 +1190,8 @@ input[type=number] {
   align-items: center;
   margin-bottom: 35px;
 }
-.services .services-filter .filter-page .filter-btn, .services .services-filter .filter-page .clear-filter {
+.services .services-filter .filter-page .filter-btn,
+.services .services-filter .filter-page .clear-filter {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -1199,7 +1200,8 @@ input[type=number] {
   cursor: pointer;
 }
 .services .services-filter .filter-page .filter-btn svg,
-.services .services-filter .filter-page .filter-btn img, .services .services-filter .filter-page .clear-filter svg,
+.services .services-filter .filter-page .filter-btn img,
+.services .services-filter .filter-page .clear-filter svg,
 .services .services-filter .filter-page .clear-filter img {
   width: 28px;
   height: 28px;
@@ -1223,7 +1225,8 @@ input[type=number] {
   left: 10px;
   top: 5px;
 }
-.services .services-filter .filter-btn, .services .services-filter .clear-filter {
+.services .services-filter .filter-btn,
+.services .services-filter .clear-filter {
   cursor: pointer;
   width: 38px;
   height: 38px;
@@ -1234,7 +1237,8 @@ input[type=number] {
   margin-right: 15px;
 }
 .services .services-filter .filter-btn svg,
-.services .services-filter .filter-btn img, .services .services-filter .clear-filter svg,
+.services .services-filter .filter-btn img,
+.services .services-filter .clear-filter svg,
 .services .services-filter .clear-filter img {
   width: 20px;
 }
@@ -1445,7 +1449,8 @@ input[type=number] {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.service-details .service-details-card-title .back-btn svg, .service-details .service-details-card-title .back-btn img {
+.service-details .service-details-card-title .back-btn svg,
+.service-details .service-details-card-title .back-btn img {
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -1454,7 +1459,8 @@ input[type=number] {
   margin-right: 15px;
   margin-left: auto;
 }
-.service-details .service-details-card-title .service-details-name .customer-name, .service-details .service-details-card-title .service-details-name .service-number {
+.service-details .service-details-card-title .service-details-name .customer-name,
+.service-details .service-details-card-title .service-details-name .service-number {
   font-size: 12px;
   color: black;
   font-weight: bold;
@@ -1480,14 +1486,62 @@ input[type=number] {
   padding: 11px;
   cursor: pointer;
 }
-.circle-btn svg, .circle-btn img {
+.circle-btn svg,
+.circle-btn img {
   width: 28px;
   height: 28px;
 }
 .circle-btn.success {
-  background-color: #2D9C25;
+  background-color: #2d9c25;
 }
 
+.map-page .services-filter {
+  z-index: 4;
+  position: relative;
+}
+.map-page .serchbox input {
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.3294117647);
+}
+.map-page .filter-btn {
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.3294117647);
+}
+.map-page .services-item {
+  border: 1px solid #e9e9e9;
+}
+.map-page .map-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.map-page .map-screen:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.0196078431);
+  z-index: 1;
+  pointer-events: none;
+}
+.map-page .map-screen iframe {
+  filter: grayscale(0.9) brightness(1.07);
+}
+.map-page .map-pointer {
+  position: fixed;
+  z-index: 2;
+  top: 36%;
+  left: 45%;
+}
+.map-page .map-my-position {
+  position: fixed;
+  z-index: 2;
+  top: 36%;
+  left: 25%;
+}
 .map-page .services-list {
   position: absolute;
   left: 50%;
@@ -1496,24 +1550,30 @@ input[type=number] {
   bottom: 85px;
   height: 155px;
 }
+.map-page .services-list .customer-name {
+  padding-top: 7px;
+}
 .map-page .services-list .services-item {
   height: 153px;
   margin: 0;
   overflow: hidden;
 }
+.map-page .services-list .col-6 {
+  padding-right: 5px;
+  padding-left: 5px;
+}
 .map-page .services-list .seemore {
   font-size: 10px;
   font-weight: bold;
   text-align: center;
-  background-color: #F5F4F2;
+  background-color: #f5f4f2;
   color: #6d6e71;
   height: 32px;
   width: calc(100% + 30px);
   margin-left: -15px;
   margin-right: -15px;
-  margin-bottom: -10px;
   padding: 9px;
-  margin-top: 4px;
+  margin-top: 0px;
 }
 
 @media only screen and (min-width: 600px) {
