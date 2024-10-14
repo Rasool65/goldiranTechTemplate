@@ -519,6 +519,27 @@
           $(".forget-password-modal").addClass("d-none");
         });
 
+
+
+
+        // full screen mode
+        $(document).ready(function() {
+    // Request fullscreen mode when the page loads
+    function openFullscreen() {
+        let elem = document.documentElement;
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { // Firefox
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { // IE/Edge
+            elem.msRequestFullscreen();
+        }
+    }
+
+    openFullscreen();
+});
     </script>
   </body>
 </html>

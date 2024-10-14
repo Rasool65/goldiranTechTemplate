@@ -342,6 +342,49 @@ input[type=number] {
   font-weight: normal;
 }
 
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.toggle-btn .toggle-body {
+  position: relative;
+  width: 90px;
+  height: 24px;
+  border-radius: 25px;
+  background-color: #F5F4F2;
+  border: 1px solid #d1d1d1;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+}
+.toggle-btn .toggle-body .toggle-switch {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 55px;
+  height: 24px;
+  background-color: #a9a9a9;
+  border-radius: 25px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  text-align: center;
+}
+.toggle-btn .toggle-body .toggle-switch svg rect {
+  transition: 0.5s;
+}
+.toggle-btn .toggle-body.on .toggle-switch {
+  transform: translateX(33px);
+  background-color: #28A745;
+}
+.toggle-btn .toggle-body.on .toggle-switch svg rect {
+  fill: #098200;
+}
+.toggle-btn .toggle-title {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: black;
+}
+
 .btn {
   font-size: 14px;
   font-weight: 500;
@@ -983,14 +1026,21 @@ input[type=number] {
   font-weight: 500;
   color: #828282;
 }
-.tech-status-card .user-rate {
+.tech-status-card .user-details {
+  width: calc(100% - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-rate {
   position: relative;
   height: 13px;
   width: 69px;
   background-image: url("data:image/svg+xml,%3Csvg width='69' height='13' viewBox='0 0 69 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60.4707 2.13024C61.2624 0.710081 61.6582 0 62.25 0C62.8418 0 63.2376 0.710075 64.0293 2.13023L64.2341 2.49764C64.4591 2.90121 64.5715 3.10299 64.7469 3.23613C64.9223 3.36927 65.1407 3.41869 65.5776 3.51753L65.9753 3.60752C67.5126 3.95535 68.2813 4.12926 68.4641 4.71733C68.647 5.30538 68.123 5.91819 67.0749 7.14369L66.8038 7.46075C66.506 7.809 66.3571 7.98312 66.2901 8.19856C66.2231 8.414 66.2456 8.64631 66.2906 9.111L66.3316 9.534C66.4901 11.1691 66.5693 11.9867 66.0906 12.3501C65.6118 12.7136 64.8921 12.3822 63.4527 11.7195L63.0803 11.548C62.6713 11.3597 62.4668 11.2655 62.25 11.2655C62.0332 11.2655 61.8287 11.3597 61.4197 11.548L61.0473 11.7195C59.6079 12.3822 58.8882 12.7136 58.4095 12.3501C57.9307 11.9867 58.0099 11.1691 58.1684 9.534L58.2094 9.111C58.2544 8.64631 58.2769 8.414 58.2099 8.19856C58.1429 7.98312 57.994 7.809 57.6962 7.46075L57.4251 7.14369C56.377 5.91819 55.853 5.30538 56.0359 4.71733C56.2188 4.12926 56.9874 3.95535 58.5247 3.60752L58.9224 3.51753C59.3593 3.41869 59.5777 3.36927 59.7531 3.23613C59.9285 3.10299 60.041 2.90121 60.2659 2.49764L60.4707 2.13024Z' fill='%23D1D1D1'/%3E%3Cpath d='M46.4707 2.13024C47.2624 0.710081 47.6582 0 48.25 0C48.8418 0 49.2376 0.710075 50.0293 2.13023L50.2341 2.49764C50.4591 2.90121 50.5715 3.10299 50.7469 3.23613C50.9223 3.36927 51.1407 3.41869 51.5776 3.51753L51.9753 3.60752C53.5126 3.95535 54.2813 4.12926 54.4641 4.71733C54.647 5.30538 54.123 5.91819 53.0749 7.14369L52.8038 7.46075C52.506 7.809 52.3571 7.98312 52.2901 8.19856C52.2231 8.414 52.2456 8.64631 52.2906 9.111L52.3316 9.534C52.4901 11.1691 52.5693 11.9867 52.0906 12.3501C51.6118 12.7136 50.8921 12.3822 49.4527 11.7195L49.0803 11.548C48.6713 11.3597 48.4668 11.2655 48.25 11.2655C48.0332 11.2655 47.8287 11.3597 47.4197 11.548L47.0473 11.7195C45.6079 12.3822 44.8882 12.7136 44.4095 12.3501C43.9307 11.9867 44.0099 11.1691 44.1684 9.534L44.2094 9.111C44.2544 8.64631 44.2769 8.414 44.2099 8.19856C44.1429 7.98312 43.994 7.809 43.6962 7.46075L43.4251 7.14369C42.377 5.91819 41.853 5.30538 42.0359 4.71733C42.2188 4.12926 42.9874 3.95535 44.5247 3.60752L44.9224 3.51753C45.3593 3.41869 45.5777 3.36927 45.7531 3.23613C45.9285 3.10299 46.041 2.90121 46.2659 2.49764L46.4707 2.13024Z' fill='%23D1D1D1'/%3E%3Cpath d='M18.4707 2.13024C19.2624 0.710081 19.6582 0 20.25 0C20.8418 0 21.2376 0.710075 22.0293 2.13023L22.2341 2.49764C22.4591 2.90121 22.5715 3.10299 22.7469 3.23613C22.9223 3.36927 23.1407 3.41869 23.5776 3.51753L23.9753 3.60752C25.5126 3.95535 26.2813 4.12926 26.4641 4.71733C26.647 5.30538 26.123 5.91819 25.0749 7.14369L24.8038 7.46075C24.506 7.809 24.3571 7.98312 24.2901 8.19856C24.2231 8.414 24.2456 8.64631 24.2906 9.111L24.3316 9.534C24.4901 11.1691 24.5693 11.9867 24.0906 12.3501C23.6118 12.7136 22.8921 12.3822 21.4527 11.7195L21.0803 11.548C20.6713 11.3597 20.4668 11.2655 20.25 11.2655C20.0332 11.2655 19.8287 11.3597 19.4197 11.548L19.0473 11.7195C17.6079 12.3822 16.8882 12.7136 16.4095 12.3501C15.9307 11.9867 16.0099 11.1691 16.1684 9.534L16.2094 9.111C16.2544 8.64631 16.2769 8.414 16.2099 8.19856C16.1429 7.98312 15.994 7.809 15.6962 7.46075L15.4251 7.14369C14.377 5.91819 13.853 5.30538 14.0359 4.71733C14.2188 4.12926 14.9874 3.95535 16.5247 3.60752L16.9224 3.51753C17.3593 3.41869 17.5777 3.36927 17.7531 3.23613C17.9285 3.10299 18.041 2.90121 18.2659 2.49764L18.4707 2.13024Z' fill='%23D1D1D1'/%3E%3Cpath d='M32.4707 2.13024C33.2624 0.710081 33.6582 0 34.25 0C34.8418 0 35.2376 0.710075 36.0293 2.13023L36.2341 2.49764C36.4591 2.90121 36.5715 3.10299 36.7469 3.23613C36.9223 3.36927 37.1407 3.41869 37.5776 3.51753L37.9753 3.60752C39.5126 3.95535 40.2813 4.12926 40.4641 4.71733C40.647 5.30538 40.123 5.91819 39.0749 7.14369L38.8038 7.46075C38.506 7.809 38.3571 7.98312 38.2901 8.19856C38.2231 8.414 38.2456 8.64631 38.2906 9.111L38.3316 9.534C38.4901 11.1691 38.5693 11.9867 38.0906 12.3501C37.6118 12.7136 36.8921 12.3822 35.4527 11.7195L35.0803 11.548C34.6713 11.3597 34.4668 11.2655 34.25 11.2655C34.0332 11.2655 33.8287 11.3597 33.4197 11.548L33.0473 11.7195C31.6079 12.3822 30.8882 12.7136 30.4095 12.3501C29.9307 11.9867 30.0099 11.1691 30.1684 9.534L30.2094 9.111C30.2544 8.64631 30.2769 8.414 30.2099 8.19856C30.1429 7.98312 29.994 7.809 29.6962 7.46075L29.4251 7.14369C28.377 5.91819 27.853 5.30538 28.0359 4.71733C28.2188 4.12926 28.9874 3.95535 30.5247 3.60752L30.9224 3.51753C31.3593 3.41869 31.5777 3.36927 31.7531 3.23613C31.9285 3.10299 32.041 2.90121 32.2659 2.49764L32.4707 2.13024Z' fill='%23D1D1D1'/%3E%3Cpath d='M4.47073 2.13024C5.26238 0.710081 5.65819 0 6.25 0C6.84181 0 7.23763 0.710075 8.02925 2.13023L8.23406 2.49764C8.45906 2.90121 8.5715 3.10299 8.74694 3.23613C8.92231 3.36927 9.14069 3.41869 9.57756 3.51753L9.97531 3.60752C11.5126 3.95535 12.2813 4.12926 12.4641 4.71733C12.647 5.30537 12.123 5.91819 11.0749 7.14369L10.8038 7.46075C10.506 7.809 10.3571 7.98312 10.2901 8.19856C10.2231 8.414 10.2456 8.64631 10.2906 9.111L10.3316 9.534C10.4901 11.1691 10.5693 11.9867 10.0906 12.3501C9.61175 12.7136 8.89206 12.3822 7.45269 11.7195L7.08031 11.548C6.67131 11.3597 6.46681 11.2655 6.25 11.2655C6.03319 11.2655 5.82869 11.3597 5.41969 11.548L5.04731 11.7195C3.60793 12.3822 2.88824 12.7136 2.40947 12.3501C1.9307 11.9867 2.00993 11.1691 2.16838 9.534L2.20936 9.111C2.25439 8.64631 2.27691 8.414 2.20991 8.19856C2.14293 7.98312 1.99402 7.809 1.6962 7.46075L1.42506 7.14369C0.377032 5.91819 -0.146986 5.30537 0.0358887 4.71733C0.218764 4.12926 0.987413 3.95535 2.52471 3.60752L2.92243 3.51753C3.35928 3.41869 3.57771 3.36927 3.75309 3.23613C3.92847 3.10299 4.04096 2.90121 4.26592 2.49764L4.47073 2.13024Z' fill='%23D1D1D1'/%3E%3C/svg%3E%0A");
   margin-top: 5px;
 }
-.tech-status-card .user-rate:after {
+.user-rate:after {
   content: "";
   width: 70%;
   height: 100%;
@@ -999,14 +1049,8 @@ input[type=number] {
   top: 0;
   background-image: url("data:image/svg+xml,%3Csvg width='69' height='13' viewBox='0 0 69 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60.4707 2.13024C61.2624 0.710081 61.6582 0 62.25 0C62.8418 0 63.2376 0.710075 64.0293 2.13023L64.2341 2.49764C64.4591 2.90121 64.5715 3.10299 64.7469 3.23613C64.9223 3.36927 65.1407 3.41869 65.5776 3.51753L65.9753 3.60752C67.5126 3.95535 68.2813 4.12926 68.4641 4.71733C68.647 5.30538 68.123 5.91819 67.0749 7.14369L66.8038 7.46075C66.506 7.809 66.3571 7.98312 66.2901 8.19856C66.2231 8.414 66.2456 8.64631 66.2906 9.111L66.3316 9.534C66.4901 11.1691 66.5693 11.9867 66.0906 12.3501C65.6118 12.7136 64.8921 12.3822 63.4527 11.7195L63.0803 11.548C62.6713 11.3597 62.4668 11.2655 62.25 11.2655C62.0332 11.2655 61.8287 11.3597 61.4197 11.548L61.0473 11.7195C59.6079 12.3822 58.8882 12.7136 58.4095 12.3501C57.9307 11.9867 58.0099 11.1691 58.1684 9.534L58.2094 9.111C58.2544 8.64631 58.2769 8.414 58.2099 8.19856C58.1429 7.98312 57.994 7.809 57.6962 7.46075L57.4251 7.14369C56.377 5.91819 55.853 5.30538 56.0359 4.71733C56.2188 4.12926 56.9874 3.95535 58.5247 3.60752L58.9224 3.51753C59.3593 3.41869 59.5777 3.36927 59.7531 3.23613C59.9285 3.10299 60.041 2.90121 60.2659 2.49764L60.4707 2.13024Z' fill='%23FAB043'/%3E%3Cpath d='M46.4707 2.13024C47.2624 0.710081 47.6582 0 48.25 0C48.8418 0 49.2376 0.710075 50.0293 2.13023L50.2341 2.49764C50.4591 2.90121 50.5715 3.10299 50.7469 3.23613C50.9223 3.36927 51.1407 3.41869 51.5776 3.51753L51.9753 3.60752C53.5126 3.95535 54.2813 4.12926 54.4641 4.71733C54.647 5.30538 54.123 5.91819 53.0749 7.14369L52.8038 7.46075C52.506 7.809 52.3571 7.98312 52.2901 8.19856C52.2231 8.414 52.2456 8.64631 52.2906 9.111L52.3316 9.534C52.4901 11.1691 52.5693 11.9867 52.0906 12.3501C51.6118 12.7136 50.8921 12.3822 49.4527 11.7195L49.0803 11.548C48.6713 11.3597 48.4668 11.2655 48.25 11.2655C48.0332 11.2655 47.8287 11.3597 47.4197 11.548L47.0473 11.7195C45.6079 12.3822 44.8882 12.7136 44.4095 12.3501C43.9307 11.9867 44.0099 11.1691 44.1684 9.534L44.2094 9.111C44.2544 8.64631 44.2769 8.414 44.2099 8.19856C44.1429 7.98312 43.994 7.809 43.6962 7.46075L43.4251 7.14369C42.377 5.91819 41.853 5.30538 42.0359 4.71733C42.2188 4.12926 42.9874 3.95535 44.5247 3.60752L44.9224 3.51753C45.3593 3.41869 45.5777 3.36927 45.7531 3.23613C45.9285 3.10299 46.041 2.90121 46.2659 2.49764L46.4707 2.13024Z' fill='%23FAB043'/%3E%3Cpath d='M18.4707 2.13024C19.2624 0.710081 19.6582 0 20.25 0C20.8418 0 21.2376 0.710075 22.0293 2.13023L22.2341 2.49764C22.4591 2.90121 22.5715 3.10299 22.7469 3.23613C22.9223 3.36927 23.1407 3.41869 23.5776 3.51753L23.9753 3.60752C25.5126 3.95535 26.2813 4.12926 26.4641 4.71733C26.647 5.30538 26.123 5.91819 25.0749 7.14369L24.8038 7.46075C24.506 7.809 24.3571 7.98312 24.2901 8.19856C24.2231 8.414 24.2456 8.64631 24.2906 9.111L24.3316 9.534C24.4901 11.1691 24.5693 11.9867 24.0906 12.3501C23.6118 12.7136 22.8921 12.3822 21.4527 11.7195L21.0803 11.548C20.6713 11.3597 20.4668 11.2655 20.25 11.2655C20.0332 11.2655 19.8287 11.3597 19.4197 11.548L19.0473 11.7195C17.6079 12.3822 16.8882 12.7136 16.4095 12.3501C15.9307 11.9867 16.0099 11.1691 16.1684 9.534L16.2094 9.111C16.2544 8.64631 16.2769 8.414 16.2099 8.19856C16.1429 7.98312 15.994 7.809 15.6962 7.46075L15.4251 7.14369C14.377 5.91819 13.853 5.30538 14.0359 4.71733C14.2188 4.12926 14.9874 3.95535 16.5247 3.60752L16.9224 3.51753C17.3593 3.41869 17.5777 3.36927 17.7531 3.23613C17.9285 3.10299 18.041 2.90121 18.2659 2.49764L18.4707 2.13024Z' fill='%23FAB043'/%3E%3Cpath d='M32.4707 2.13024C33.2624 0.710081 33.6582 0 34.25 0C34.8418 0 35.2376 0.710075 36.0293 2.13023L36.2341 2.49764C36.4591 2.90121 36.5715 3.10299 36.7469 3.23613C36.9223 3.36927 37.1407 3.41869 37.5776 3.51753L37.9753 3.60752C39.5126 3.95535 40.2813 4.12926 40.4641 4.71733C40.647 5.30538 40.123 5.91819 39.0749 7.14369L38.8038 7.46075C38.506 7.809 38.3571 7.98312 38.2901 8.19856C38.2231 8.414 38.2456 8.64631 38.2906 9.111L38.3316 9.534C38.4901 11.1691 38.5693 11.9867 38.0906 12.3501C37.6118 12.7136 36.8921 12.3822 35.4527 11.7195L35.0803 11.548C34.6713 11.3597 34.4668 11.2655 34.25 11.2655C34.0332 11.2655 33.8287 11.3597 33.4197 11.548L33.0473 11.7195C31.6079 12.3822 30.8882 12.7136 30.4095 12.3501C29.9307 11.9867 30.0099 11.1691 30.1684 9.534L30.2094 9.111C30.2544 8.64631 30.2769 8.414 30.2099 8.19856C30.1429 7.98312 29.994 7.809 29.6962 7.46075L29.4251 7.14369C28.377 5.91819 27.853 5.30538 28.0359 4.71733C28.2188 4.12926 28.9874 3.95535 30.5247 3.60752L30.9224 3.51753C31.3593 3.41869 31.5777 3.36927 31.7531 3.23613C31.9285 3.10299 32.041 2.90121 32.2659 2.49764L32.4707 2.13024Z' fill='%23FAB043'/%3E%3Cpath d='M4.47073 2.13024C5.26238 0.710081 5.65819 0 6.25 0C6.84181 0 7.23763 0.710075 8.02925 2.13023L8.23406 2.49764C8.45906 2.90121 8.5715 3.10299 8.74694 3.23613C8.92231 3.36927 9.14069 3.41869 9.57756 3.51753L9.97531 3.60752C11.5126 3.95535 12.2813 4.12926 12.4641 4.71733C12.647 5.30537 12.123 5.91819 11.0749 7.14369L10.8038 7.46075C10.506 7.809 10.3571 7.98312 10.2901 8.19856C10.2231 8.414 10.2456 8.64631 10.2906 9.111L10.3316 9.534C10.4901 11.1691 10.5693 11.9867 10.0906 12.3501C9.61175 12.7136 8.89206 12.3822 7.45269 11.7195L7.08031 11.548C6.67131 11.3597 6.46681 11.2655 6.25 11.2655C6.03319 11.2655 5.82869 11.3597 5.41969 11.548L5.04731 11.7195C3.60793 12.3822 2.88824 12.7136 2.40947 12.3501C1.9307 11.9867 2.00993 11.1691 2.16838 9.534L2.20936 9.111C2.25439 8.64631 2.27691 8.414 2.20991 8.19856C2.14293 7.98312 1.99402 7.809 1.6962 7.46075L1.42506 7.14369C0.377032 5.91819 -0.146986 5.30537 0.0358887 4.71733C0.218764 4.12926 0.987413 3.95535 2.52471 3.60752L2.92243 3.51753C3.35928 3.41869 3.57771 3.36927 3.75309 3.23613C3.92847 3.10299 4.04096 2.90121 4.26592 2.49764L4.47073 2.13024Z' fill='%23FAB043'/%3E%3C/svg%3E%0A");
 }
-.tech-status-card .user-rate svg {
+.user-rate svg {
   margin-top: -12px;
-}
-.tech-status-card .user-details {
-  width: calc(100% - 120px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .tech-short-details {
@@ -1332,6 +1376,7 @@ input[type=number] {
 }
 .base-menu .menu-icon svg {
   width: 25px;
+  height: auto;
 }
 
 .services {
@@ -1549,10 +1594,7 @@ input[type=number] {
     opacity: 1;
   }
 }
-.service-details {
-  height: calc(100% - 30px);
-}
-.service-details .service-details-card {
+.service-details-card {
   width: 100%;
   height: 100%;
   border-radius: 30px;
@@ -1565,7 +1607,7 @@ input[type=number] {
   position: relative;
   overflow: hidden;
 }
-.service-details .service-details-card .service-details-options {
+.service-details-card .service-details-options {
   position: absolute;
   background-color: white;
   width: calc(100% - 45px);
@@ -1577,14 +1619,14 @@ input[type=number] {
   z-index: 80;
   transition: 0.3s;
 }
-.service-details .service-details-card .service-details-options.open {
+.service-details-card .service-details-options.open {
   transform: translate(-50%, calc(-100% + 150px));
 }
-.service-details .service-details-card .service-details-options .service-details-options-button {
+.service-details-card .service-details-options .service-details-options-button {
   padding: 15px 15px 25px 15px;
   text-align: center;
 }
-.service-details .service-details-card .service-details-options .service-details-options-list {
+.service-details-card .service-details-options .service-details-options-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1593,12 +1635,12 @@ input[type=number] {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.service-details .service-details-card .service-details-options .service-details-options-list .service-details-options-item {
+.service-details-card .service-details-options .service-details-options-list .service-details-options-item {
   width: 25%;
   margin-bottom: 20px;
   cursor: pointer;
 }
-.service-details .service-details-card .service-details-options .service-details-options-list .service-options-icon {
+.service-details-card .service-details-options .service-details-options-list .service-options-icon {
   width: 58px;
   height: 58px;
   border-radius: 25px;
@@ -1606,20 +1648,21 @@ input[type=number] {
   margin: 0 auto;
   padding: 10px;
 }
-.service-details .service-details-card .service-details-options .service-details-options-list .service-options-title {
+.service-details-card .service-details-options .service-details-options-list .service-options-title {
   margin-top: 5px;
   text-align: center;
   font-size: 10px;
   font-weight: bold;
   color: #4f4f4f;
 }
-.service-details .service-details-card-title {
+
+.service-details-card-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.service-details .service-details-card-title .service-details-image {
+.service-details-card-title .service-details-image {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -1628,28 +1671,32 @@ input[type=number] {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.service-details .service-details-card-title .back-btn svg,
-.service-details .service-details-card-title .back-btn img {
+.service-details-card-title .back-btn svg,
+.service-details-card-title .back-btn img {
   width: 25px;
   height: 25px;
   cursor: pointer;
 }
-.service-details .service-details-card-title .service-details-name {
+.service-details-card-title .service-details-name {
   margin-right: 15px;
   margin-left: auto;
 }
-.service-details .service-details-card-title .service-details-name .customer-name,
-.service-details .service-details-card-title .service-details-name .service-number {
+.service-details-card-title .service-details-name .customer-name,
+.service-details-card-title .service-details-name .service-number {
   font-size: 12px;
   color: black;
   font-weight: bold;
 }
-.service-details .service-details-card-title .service-details-name .service-number span {
+.service-details-card-title .service-details-name .service-number span {
   font-size: 10px;
   font-weight: bold;
   color: #9b9b9b;
 }
-.service-details .service-info-btns {
+
+.service-details, .user-profile-details {
+  height: calc(100% - 30px);
+}
+.service-details .service-info-btns, .user-profile-details .service-info-btns {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1753,6 +1800,97 @@ input[type=number] {
   margin-right: -15px;
   padding: 9px;
   margin-top: 0px;
+}
+
+.user-profile-content {
+  border-top: 1px solid #f5f4f2;
+  border-bottom: 1px solid #f5f4f2;
+  margin-bottom: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow-y: auto;
+}
+
+.user-profile-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.062);
+  background-color: white;
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-profile-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.user-profile-title .user-profile-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #e4e4e4;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.user-profile-title .back-btn svg,
+.user-profile-title .back-btn img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.user-profile-title .user-profile-details-name {
+  margin-right: 15px;
+  margin-left: auto;
+  width: calc(100% - 72PX);
+}
+.user-profile-title .user-profile-details-name .customer-name,
+.user-profile-title .user-profile-details-name .user-profile-number {
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
+.user-profile-title .user-profile-details-name .user-profile-number {
+  letter-spacing: 3px;
+}
+.user-profile-title .user-profile-details-name .user-profile-number span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #9b9b9b;
+}
+
+.user-base-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.user-base-info li {
+  color: #ADADAD;
+  font-size: 10px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.user-base-info li span {
+  font-size: 12px;
+  color: black;
+}
+
+.report-date {
+  font-size: 10px;
+  font-weight: 500;
+  color: #828282;
+  text-align: left;
+  margin-bottom: -20px;
+}
+
+.tech-report-summery-item.active {
+  color: #8E99FB;
 }
 
 .service-content {
