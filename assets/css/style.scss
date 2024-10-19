@@ -267,6 +267,10 @@ footer:before {
       left: 40px;
       top: 30px;
       cursor: pointer;
+      svg , img{
+        width: 40px;
+        height: auto;
+      }
     }
   }
   &.input-icon {

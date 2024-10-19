@@ -219,6 +219,10 @@ footer:before {
   top: 30px;
   cursor: pointer;
 }
+.input-box.input-btn .input-btn-icon svg, .input-box.input-btn .input-btn-icon img {
+  width: 40px;
+  height: auto;
+}
 .input-box.input-icon label {
   right: 35px;
 }
