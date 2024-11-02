@@ -2661,3 +2661,23 @@ input[type="number"] {
 
 // ───────────────────────────────── Start **Responsive
 // ---------------------------------------------------
+@for $i from 15 through 30 {
+  .fz-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+$base-size: 10px;
+@for $i from 1 through 15 {
+  .mt-#{$i} {
+    margin-top: $i * $base-size !important;
+  }
+}
+
+$secondary-color: #2ecc71;
+.text-accent {
+  color: $secondary-color;
+}
+
+
+
