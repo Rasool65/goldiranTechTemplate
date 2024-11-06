@@ -508,6 +508,9 @@ input[type="number"] {
     border-bottom: 1px solid #a9a9a9;
     padding-bottom: 15px;
     cursor: pointer;
+    &.disable-toggle .toggle-switch{
+      left: 17px;
+    }
   }
   .toggle-title{
     margin-bottom: 15px !important;

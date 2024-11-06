@@ -439,6 +439,9 @@ input[type=number] {
   padding-bottom: 15px;
   cursor: pointer;
 }
+.checklist-toggle .toggle-btn.disable-toggle .toggle-switch {
+  left: 17px;
+}
 .checklist-toggle .toggle-title {
   margin-bottom: 15px !important;
 }
