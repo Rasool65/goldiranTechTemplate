@@ -432,6 +432,34 @@ input[type=number] {
   color: black;
 }
 
+.checklist-toggle .toggle-btn {
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid #a9a9a9;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+.checklist-toggle .toggle-title {
+  margin-bottom: 15px !important;
+}
+.checklist-toggle .toggle-body {
+  margin-right: 25px;
+}
+.checklist-toggle .toggle-body:before {
+  content: "بله";
+  position: absolute;
+  right: -25px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.checklist-toggle .toggle-body:after {
+  content: "خیر";
+  position: absolute;
+  left: -25px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .btn {
   font-size: 14px;
   font-weight: 500;

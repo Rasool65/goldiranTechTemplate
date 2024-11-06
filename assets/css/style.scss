@@ -501,6 +501,35 @@ input[type="number"] {
   }
 }
 
+.checklist-toggle{
+  .toggle-btn{
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid #a9a9a9;
+    padding-bottom: 15px;
+    cursor: pointer;
+  }
+  .toggle-title{
+    margin-bottom: 15px !important;
+  }
+  .toggle-body{
+    margin-right: 25px;
+    &:before{
+      content: 'بله';
+      position: absolute;
+      right: -25px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    &:after{
+      content: 'خیر';
+      position: absolute;
+      left: -25px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}
 // ───────────────────────────────── Button Style
 
 
