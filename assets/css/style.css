@@ -617,6 +617,56 @@ input[type=number] {
   background: #b30000;
 }
 
+.image-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgb(214, 214, 214);
+}
+.image-slider:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.image-slider:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-bottom: 200px solid transparent;
+  border-left: 160px solid rgba(255, 255, 255, 0.22);
+  filter: blur(6px);
+  pointer-events: none;
+}
+.image-slider .slider-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.308);
+  transform: translateY(-50%);
+  padding: 6px 15px;
+  cursor: pointer;
+}
+.image-slider .slider-btn svg {
+  width: 15px;
+  height: auto;
+}
+.image-slider .slider-btn svg path {
+  fill: white;
+}
+.image-slider .slider-btn.prev-btn {
+  right: 0;
+}
+
 .login-header-bg {
   position: relative;
   width: 100%;
