@@ -2664,4 +2664,15 @@ input[type=number] {
 
 .text-accent {
   color: #2ecc71;
+}
+
+.commission-data {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.commission-data li {
+  white-space: nowrap;
 }/*# sourceMappingURL=style.css.map */

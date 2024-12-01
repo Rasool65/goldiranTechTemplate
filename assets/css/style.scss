@@ -2761,6 +2761,13 @@ $secondary-color: #2ecc71;
 .text-accent {
   color: $secondary-color;
 }
-
-
-
+.commission-data{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  li{
+    white-space: nowrap;
+  }
+}
