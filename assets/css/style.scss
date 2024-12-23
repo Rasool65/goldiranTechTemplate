@@ -2771,3 +2771,11 @@ $secondary-color: #2ecc71;
     white-space: nowrap;
   }
 }
+
+.service-registration-details{
+  .col-6 , .col-12{
+    font-size: 12px;
+    padding-bottom: 5px;
+    span{font-weight: bold;}
+  }
+}
