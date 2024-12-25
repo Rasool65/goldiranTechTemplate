@@ -2779,3 +2779,25 @@ $secondary-color: #2ecc71;
     span{font-weight: bold;}
   }
 }
+
+.regarant-result-card{
+  border: 1px solid #b5b5b5;
+  padding: 10px;
+  border-radius: 20px 15px;
+  .regarant-data{
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #9c9c9c;
+    div{
+      padding: 5px 0;
+    }
+    span{
+      color: black;
+      font-size: 14px;
+    }
+  }
+  .regarant-total-price{
+
+  }
+}
