@@ -76,7 +76,7 @@ body {
 .main.base-page {
   background-color: #f5f4f2;
   padding-top: 80px;
-  padding-bottom: 60px;
+  padding-bottom: 75px;
 }
 
 .header-menu {
@@ -1464,12 +1464,16 @@ input[type=number] {
   padding-right: 0 !important;
 }
 
+.notif-carousel .owl-dots {
+  display: none;
+}
+
 .home-content-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: calc(100% - 10px);
+  height: calc(100% - 10px) !important;
 }
 .home-content-box.service-open .short-key-carousel,
 .home-content-box.service-open .notif-carousel {
@@ -2254,12 +2258,12 @@ input[type=number] {
   width: 100%;
 }
 
-.info-pack {
+.info-pack, .payment-failed-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.info-pack .info-item {
+.info-pack .info-item, .info-pack .payment-failed-item, .payment-failed-list .info-item, .payment-failed-list .payment-failed-item {
   border-radius: 15px;
   padding: 10px;
   background-color: #f2f2f2;
@@ -2267,26 +2271,26 @@ input[type=number] {
   align-items: center;
   margin-bottom: 15px;
 }
-.info-pack .info-pack-image {
+.info-pack .info-pack-image, .payment-failed-list .info-pack-image {
   margin-left: 10px;
 }
-.info-pack .info-pack-image img {
+.info-pack .info-pack-image img, .payment-failed-list .info-pack-image img {
   width: 70px;
   height: auto;
 }
-.info-pack .info-pack-data {
+.info-pack .info-pack-data, .payment-failed-list .info-pack-data {
   display: flex;
   flex-wrap: wrap;
   font-size: 12px;
   font-weight: normal;
   color: #8f8f8f;
 }
-.info-pack .info-pack-data div {
+.info-pack .info-pack-data div, .payment-failed-list .info-pack-data div {
   margin-bottom: 2px;
   font-weight: 500;
   margin-left: 10px;
 }
-.info-pack .info-pack-data span {
+.info-pack .info-pack-data span, .payment-failed-list .info-pack-data span {
   color: black;
 }
 
@@ -2508,6 +2512,30 @@ input[type=number] {
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+.serchbox-select {
+  border: none;
+  font-size: 14px;
+  color: #4f4f4f;
+  width: 120px !important;
+  min-width: 120px;
+  padding-right: 5px;
+  margin: 0px 5px 0 10px;
+  height: 32px;
+  min-height: 32px;
+  border-right: 1px solid rgb(221, 221, 221);
+  position: absolute;
+  border-radius: 0 !important;
+  top: 2px;
+  left: 30px;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.payment-failed-list .payment-failed-item {
+  margin-top: 10px;
+  background-color: white;
 }
 
 @media only screen and (min-width: 600px) {

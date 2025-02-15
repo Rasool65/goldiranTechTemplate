@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <div class="main base-page page-404">
+    <div class="main base-page">
       <nav class="header-menu">
         <div class="menu-bar">
           <svg
@@ -58,28 +58,28 @@
               </svg>
             </span>
             <li class="menu-item">
-                <div class="menu-icon"></div>
-                <div class="menu-item-name">پروفایل کاربری</div>
+              <div class="menu-icon"></div>
+              <div class="menu-item-name">پروفایل کاربری</div>
             </li>
             <li class="menu-item">
-                <div class="menu-icon"></div>
-                <div class="menu-item-name">سرویس ها</div>
+              <div class="menu-icon"></div>
+              <div class="menu-item-name">سرویس ها</div>
             </li>
             <li class="menu-item">
-                <div class="menu-icon"></div>
-                <div class="menu-item-name">پشتیبانی</div>
+              <div class="menu-icon"></div>
+              <div class="menu-item-name">پشتیبانی</div>
             </li>
             <li class="menu-item">
-                <div class="menu-icon"></div>
-                <div class="menu-item-name">انبار من</div>
+              <div class="menu-icon"></div>
+              <div class="menu-item-name">انبار من</div>
             </li>
             <li class="menu-item">
-                <div class="menu-icon"></div>
-                <div class="menu-item-name">گزارشات </div>
+              <div class="menu-icon"></div>
+              <div class="menu-item-name">گزارشات</div>
             </li>
             <li class="menu-item">
-                <div class="menu-icon"></div>
-                <div class="menu-item-name">خروج</div>
+              <div class="menu-icon"></div>
+              <div class="menu-item-name">خروج</div>
             </li>
           </ul>
         </div>
@@ -88,14 +88,69 @@
         </div>
       </nav>
 
-      <div class="image-404">
-        <img src="./assets/img/401.jpg" alt="">
-        <!-- <img src="./assets/img/404-red-01.gif" alt=""> -->
-        <div class="notif">عدم دسترسی !!
-          <!-- <br> -->
-          <span>دسترسی شما به این صفحه غیر مجاز است...</span>
+      <div class="container content-box services">
+        <div class="services-filter">
+          <div class="serchbox">
+            <input type="text" placeholder="شماره سرویس"  />
+
+            <select class="serchbox-select form-control">
+              <option value="" disabled="" selected=""> تک پرداختی</option>
+              <option>تک پرداختی</option>
+              <option>چند پرداختی</option>
+
+            </select>
+
+            <div class="search-btn">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.1039 4.84276C8.90338 4.84276 7.1195 6.62662 7.1195 8.82712M6.59452 13.3333L3.13514 16.7958M4.72889 8.82712C4.72889 12.3479 7.58304 15.2021 11.1039 15.2021C14.6247 15.2021 17.4788 12.3479 17.4788 8.82712C17.4788 5.30632 14.6247 2.45215 11.1039 2.45215C7.58304 2.45215 4.72889 5.30632 4.72889 8.82712Z"
+                  stroke="#6D6E71"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+
         </div>
-        <div class="btn">برگشت</div>
+
+        <ul class="payment-failed-list">
+
+          <li class="payment-failed-item">
+            <div class="info-pack-data">
+              <div>شماره سرویس :  <span>165498761331413</span> </div>
+              <div>زمان ایجاد : <span>1403/06/23 | 13:42</span> </div>
+              <div class="w-50">مبلغ : <span>1.675.000</span> </div>
+            </div>
+            <div class="btn success-btn mt-auto">تایید پرداخت </div>
+
+          </li>
+          <li class="payment-failed-item">
+            <div class="info-pack-data">
+              <div>شماره سرویس :  <span>165498761331413</span> </div>
+              <div>زمان ایجاد : <span>1403/06/23 | 13:42</span> </div>
+              <div class="w-50">مبلغ : <span>1.675.000</span> </div>
+            </div>
+            <div class="btn success-btn mt-auto">تایید پرداخت </div>
+
+          </li>
+          <li class="payment-failed-item">
+            <div class="info-pack-data">
+              <div>شماره سرویس :  <span>165498761331413</span> </div>
+              <div>زمان ایجاد : <span>1403/06/23 | 13:42</span> </div>
+              <div class="w-50">مبلغ : <span>1.675.000</span> </div>
+            </div>
+            <div class="btn success-btn mt-auto">تایید پرداخت </div>
+
+          </li>
+        </ul>
       </div>
 
       <footer class="">
@@ -271,12 +326,7 @@
 
     <script src="./assets/libs/jquery.min.js"></script>
     <script src="./assets/libs/bootstrap4/bootstrap.min.js"></script>
-    <!-- Resources -->
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
-    <script src="./assets/libs/owlcarousel/owl.carousel.min.js"></script>
     <script>
       $(".menu-icon").click(function () {
         $(".menu-list").addClass("show");
@@ -284,32 +334,16 @@
       $(".close-menu").click(function () {
         $(".menu-list").removeClass("show");
       });
-      $(".tech-status-card-footer").click(function () {
-        $(".tech-status-card").toggleClass("open");
-        $(".home-content-box").toggleClass("tech-status-open");
+      $(".filter-btn").click(function () {
+        $(".filter-page").addClass("active");
       });
-
-      // ================> service selcetor js
-      var angleStart = -360;
-
-      // jquery rotate animation
-      function rotate(li, d) {
-        $({ d: angleStart }).animate(
-          { d: d },
-          {
-            step: function (now) {
-              $(li)
-                .css({ transform: "rotate(" + now + "deg)" })
-                .find("label")
-                .css({ transform: "rotate(" + -now + "deg)" });
-            },
-            duration: 0,
-          }
-        );
-      }
-
-
+      $(".filter-close-btn").click(function () {
+        $(".filter-page").removeClass("active");
+      });
+      // $(".tech-status-card-footer").click(function () {
+      //   $(".tech-status-card").toggleClass("open");
+      //   $(".home-content-box").toggleClass("tech-status-open");
+      // });
     </script>
   </body>
 </html>
-
