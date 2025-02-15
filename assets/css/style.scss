@@ -2726,7 +2726,14 @@ input[type="number"] {
 .payment-failed-list{
   .payment-failed-item{
     margin-top: 10px;
-    background-color: white;
+    // background-color: white;
+  }
+}
+.payment-failed-search{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  input{
+    border: 1px solid rgb(221, 221, 221);
   }
 }
 // ───────────────────────────────── End **STechnical Code
