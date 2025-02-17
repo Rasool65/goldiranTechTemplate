@@ -2834,3 +2834,17 @@ $secondary-color: #2ecc71;
 
   }
 }
+
+// repair screen style
+.home-content-box {
+  height: calc(100% - 20px) !important;
+  overflow-y: auto;
+  min-height: 505px;
+}
+.header-menu {
+  height: 55px;
+  padding: 10px 25px;
+}
+.main.base-page {
+  padding-top: 65px !important;
+}
