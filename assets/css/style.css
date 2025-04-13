@@ -2751,4 +2751,8 @@ input[type=number] {
 
 .main.base-page {
   padding-top: 65px !important;
+}
+
+.page-down {
+  background-color: #f8f8f8 !important;
 }/*# sourceMappingURL=style.css.map */
